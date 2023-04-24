@@ -90,13 +90,17 @@ class Halfling:
         else:
             self._state = s
 
-    def get_max_points(self, stat):
-        if stat == "potatoes":
-            return self._max_potatoes
-        if stat == "destiny":
-            return self._max_destiny
-        if stat == "orcs":
-            return self._max_orcs
+    @property
+    def max_potatoes(self):
+        return self._max_potatoes
+
+    @property
+    def max_destiny(self):
+        return self._max_destiny
+
+    @property
+    def max_orcs(self):
+        return self._max_orcs
 
     @property
     def stats(self):
